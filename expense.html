@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Expense Tracker</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="script.js" defer></script>
+
+</head>
+<body class="bg-white">
+  <div class="text-center my-4">
+    <h1 class="text-3xl font-bold">Expense Tracker</h1>
+  </div>
+
+  <div class="container px-0">
+    <!-- Transaction Form -->
+    <form id="transaction-form" class="mb-3 w-100">
+      <div class="d-flex flex-wrap align-items-center w-100">
+        <input type="text" id="name" placeholder="Name" class="p-2 m-1 border-2 border-blue-300 rounded flex-grow-1" required />
+        <input type="number" id="amount" placeholder="Amount" class="p-2 m-1 border-2 border-blue-300 rounded" required />
+        <select id="category" class="p-2 m-1 border-2 border-blue-300 rounded" required>
+          <option value="" disabled selected>Select Category</option>
+          <option>Food</option><option>Transport</option><option>Salary</option>
+          <option>Utilities</option><option>Entertainment</option>
+        </select>
+        <input type="date" id="date" class="p-2 m-1 border-2 border-blue-300 rounded" required />
+        <button type="submit" class="btn btn-success m-1">Add Expenses</button>
+      </div>
+    </form>
+
+    <!-- Transaction Table -->
+    <table class="table table-bordered text-center border-2 border-black-800 w-100">
+      <thead class="bg-gray-100 border-2 border-black-800">
+        <tr>
+          <th>Name</th>
+          <th>Amount</th>
+          <th>Category</th>
+          <th>Date</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="transaction-body"></tbody>
+    </table>
+    <p class="font-bold text-right text-2xl">Total: <span id="total">$0.00</span></p>
+<!-- Category Filter -->
+ 
+    
+    <div class="d-flex justify-content-end align-items-center mb-3">
+  <p class="mb-0 mr-2 text-2xl">Filter By Category:</p>
+  <select id="filter-category" class="form-control w-[190px]">
+    <option value="">All</option>
+    <option>Food</option>
+    <option>Transport</option>
+    <option>Salary</option>
+    <option>Utilities</option>
+    <option>Entertainment</option>
+  </select>
+</div>
+ 
+    <!-- Chart -->
+    <canvas id="expense-chart" width="100%" height="200"></canvas>
+  </div>
+
+   
+</body>
+</html>
