@@ -11,3 +11,4 @@ The Expense Tracker app helps users keep track of their daily expenses easily. U
 - Responsive design for mobile and desktop
 
  
+[Screenshot] 2025-07-03 170534.png
