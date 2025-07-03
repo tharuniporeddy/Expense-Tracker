@@ -10,7 +10,7 @@ The Expense Tracker app helps users keep track of their daily expenses easily. U
 - Filter expenses by date or category
 - Responsive design for mobile and desktop
 ### Initial Screen (No Data)
-![Initial](expense-tracker-intial.png)
+![Initial](expense-tracker-initial.png)
 
 ### After Adding Transactions
 ![With Data](expense-tracker-added-data.png)
